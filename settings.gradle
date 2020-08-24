@@ -1,0 +1,4 @@
+include ':resources'
+include ':global'
+include ':app'
+rootProject.name = "teeth"
