@@ -1,4 +1,5 @@
+include ':sample:mvvm:app'
 include ':resources'
 include ':global'
-include ':app'
+include ':sample:mvi:app'
 rootProject.name = "teeth"
