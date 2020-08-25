@@ -10,7 +10,7 @@ import toothpick.config.Module
 class ServerModule : Module() {
     init {
         bind(Gson::class.java).toInstance(Gson())
-        bind(OkHttpClient::class.java).toProvider(OkHttpClientProvider::class.java).singleton()
-        bind(ApiClient::class.java).toProvider(ApiServiceProvider::class.java).singleton()
+        bind(OkHttpClient::class.java).toProvider(OkHttpClientProvider::class.java).providesSingleton()
+        bind(ApiClient::class.java).toProvider(ApiServiceProvider::class.java).providesSingleton()
     }
 }
