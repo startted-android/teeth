@@ -1,4 +1,4 @@
-package com.startted.global_mvvm
+package com.startted.global
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable
