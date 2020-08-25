@@ -2,7 +2,7 @@ package com.startted.app.di
 
 import android.content.Context
 import com.startted.app.ScreensImpl
-import com.startted.global.Screens
+import com.startted.common.Screens
 import ru.terrakok.cicerone.Cicerone
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router

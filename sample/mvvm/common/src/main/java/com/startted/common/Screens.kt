@@ -1,4 +1,4 @@
-package com.startted.global
+package com.startted.common
 
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 

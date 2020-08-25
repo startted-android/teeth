@@ -16,11 +16,11 @@ class App: Application() {
     }
 
     private fun toothpick() {
-        if (BuildConfig.DEBUG) {
+//        if (BuildConfig.DEBUG) {
             Toothpick.setConfiguration(Configuration.forDevelopment().preventMultipleRootScopes())
-        } else {
-            Toothpick.setConfiguration(Configuration.forProduction())
-        }
+//        } else {
+//            Toothpick.setConfiguration(Configuration.forProduction())
+//        }
     }
 
     private fun appScope() {

@@ -1,6 +1,6 @@
 package com.startted.app.ui
 
-import com.startted.global.Screens
+import com.startted.common.Screens
 import ru.terrakok.cicerone.Router
 import javax.inject.Inject
 

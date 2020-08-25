@@ -1,4 +1,4 @@
-package com.startted.global
+package com.startted.global_mvvm
 
 import androidx.lifecycle.MutableLiveData
 import io.reactivex.Observable
@@ -67,7 +67,7 @@ open class Paginator<T>(
                                 list = list,
                                 ifEmpty = State.FullData(state.data, loadingPageNumber),
                                 ifShort = State.FullData(state.data + list, loadingPageNumber),
-                                ifElse = State.Data(state.data+list, loadingPageNumber)
+                                ifElse = State.Data(state.data + list, loadingPageNumber)
                             ).setAsCurrent()
                         },
                         {
@@ -86,7 +86,10 @@ open class Paginator<T>(
                         { list ->
                             getSuccessState(
                                 list = list,
-                                ifEmpty = if (state.data.isEmpty()) State.Empty() else State.FullData(state.data + list, state.errorPageNumber),
+                                ifEmpty = if (state.data.isEmpty()) State.Empty() else State.FullData(
+                                    state.data + list,
+                                    state.errorPageNumber
+                                ),
                                 ifShort = State.FullData(state.data + list, state.errorPageNumber),
                                 ifElse = State.Data(state.data + list, state.errorPageNumber)
                             ).setAsCurrent()
@@ -275,7 +278,7 @@ open class Paginator<T>(
                         { newItem ->
                             State.Data(
                                 state.data.map { if (idMapper?.invoke(it) == itemId) newItem else it },
-                                state.errorPageNumber-1
+                                state.errorPageNumber - 1
                             ).setAsCurrent()
                         },
                         {}
@@ -315,7 +318,7 @@ open class Paginator<T>(
                     else {
                         State.Data(
                             it,
-                            state.errorPageNumber-1
+                            state.errorPageNumber - 1
                         ).setAsCurrent()
                     }
                 }

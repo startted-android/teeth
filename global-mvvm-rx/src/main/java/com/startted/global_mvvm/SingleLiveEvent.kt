@@ -1,4 +1,4 @@
-package com.startted.global
+package com.startted.global_mvvm
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner

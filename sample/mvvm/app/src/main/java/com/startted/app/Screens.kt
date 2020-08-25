@@ -1,7 +1,7 @@
 package com.startted.app
 
 import com.startted.feature_articles.ArticlesFragment
-import com.startted.global.Screens
+import com.startted.common.Screens
 import com.startted.mainflow.MainFlowFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 
