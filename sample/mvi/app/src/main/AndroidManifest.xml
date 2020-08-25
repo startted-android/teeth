@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.airatlovesmusic.teeth">
+package="com.startted.teeth">
 
 <application
     android:allowBackup="true"
