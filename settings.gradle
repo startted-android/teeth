@@ -1,3 +1,5 @@
+include ':sample:mvvm:common'
+include ':global-mvvm-rx'
 include ':sample:lists'
 include ':sample:core-network'
 include ':sample:model'

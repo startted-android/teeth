@@ -30,7 +30,7 @@ androidExtensions {
 }
 
 dependencies {
-    implementation project(":global")
+    implementation project(':sample:mvvm:common')
     implementation project(":sample:resources")
     implementation project(":sample:core-network")
     implementation project(path: ':sample:model')

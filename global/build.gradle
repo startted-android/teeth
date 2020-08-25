@@ -37,5 +37,5 @@ dependencies {
     implementation("com.github.stephanenicolas.toothpick:toothpick-runtime:$toothpickVersion")
     kapt("com.github.stephanenicolas.toothpick:toothpick-compiler:$toothpickVersion")
 
-    implementation("ru.terrakok.cicerone:cicerone:5.1.1")
+    api "ru.terrakok.cicerone:cicerone:5.1.1"
 }

@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -26,15 +25,14 @@ android {
 }
 
 dependencies {
-    implementation project(':sample:mvvm:common')
+    api project (":global")
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-alpha06"
 
-    def toothpickVersion = "3.1.0"
-    implementation("com.github.stephanenicolas.toothpick:toothpick-runtime:$toothpickVersion")
-    kapt("com.github.stephanenicolas.toothpick:toothpick-compiler:$toothpickVersion")
-
-    implementation("ru.terrakok.cicerone:cicerone:5.1.1")
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 }
