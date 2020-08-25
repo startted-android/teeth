@@ -8,5 +8,4 @@ include ':sample:mvvm:features:feature-mainflow'
 include ':sample:resources'
 include ':sample:mvvm:app'
 include ':global'
-include ':sample:mvi:app'
 rootProject.name = "teeth"
