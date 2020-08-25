@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.airatlovesmusic.feature_articles.adapter.ArticlesAdapter
 import com.airatlovesmusic.global.base.BaseFragment
-import com.airatlovesmusic.resources.rvArticles
+import com.airatlovesmusic.lists.articles.ArticlesAdapter
+import kotlinx.android.synthetic.main.fragment_articles.*
 
 class ArticlesFragment: BaseFragment() {
 
@@ -28,9 +28,9 @@ class ArticlesFragment: BaseFragment() {
     }
 
     private fun initRecycler() {
-        rvArticles.layoutManager = LinearLayoutManager(context)
-        rvArticles.adapter = adapter
-        rvArticles.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
+        rv_articles.layoutManager = LinearLayoutManager(context)
+        rv_articles.adapter = adapter
+        rv_articles.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
     }
 
 }

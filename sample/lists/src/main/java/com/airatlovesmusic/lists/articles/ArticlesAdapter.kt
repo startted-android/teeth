@@ -1,9 +1,9 @@
-package com.airatlovesmusic.feature_articles.adapter
+package com.airatlovesmusic.lists.articles
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.airatlovesmusic.feature_articles.R
+import com.airatlovesmusic.lists.R
 import com.airatlovesmusic.model.Article
 
 class ArticlesAdapter: RecyclerView.Adapter<ArticleHolder>() {

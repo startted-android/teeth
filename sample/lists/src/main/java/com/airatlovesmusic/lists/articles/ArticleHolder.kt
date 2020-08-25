@@ -1,14 +1,13 @@
-package com.airatlovesmusic.feature_articles.adapter
+package com.airatlovesmusic.lists.articles
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.airatlovesmusic.model.Article
-import com.airatlovesmusic.resources.tvTitle
-import com.airatlovesmusic.resources.tvUrl
+import kotlinx.android.synthetic.main.item_article.view.*
 
 class ArticleHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     fun bind(data: Article) {
-        itemView.tvTitle.text = data.title
-        itemView.tvUrl.text = data.url
+        itemView.tv_title.text = data.title
+        itemView.tv_url.text = data.url
     }
 }

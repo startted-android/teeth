@@ -1,3 +1,4 @@
+include ':sample:lists'
 include ':sample:core-network'
 include ':sample:model'
 include ':sample:mvvm:features:feature-articles'
