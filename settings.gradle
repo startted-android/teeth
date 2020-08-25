@@ -1,3 +1,7 @@
+include ':sample:core-network'
+include ':sample:model'
+include ':sample:mvvm:features:feature-articles'
+include ':sample:mvvm:features:feature-mainflow'
 include ':sample:resources'
 include ':sample:mvvm:app'
 include ':global'
