@@ -7,8 +7,6 @@ object Libs {
 
         object Ktx {
             const val coreKtx = "androidx.core:core-ktx:1.3.1"
-            const val activityKtx = "androidx.activity:activity-ktx:1.1.0"
-            const val livedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.Libraries.lifecycle}"
             const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.Libraries.lifecycle}"
         }
 
