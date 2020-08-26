@@ -27,6 +27,14 @@ fun Project.withApis(vararg libs: String) {
     }
 }
 
+fun Project.withApiProjects(vararg libs: String) {
+    dependencies {
+        libs.forEach {
+            api(project(it))
+        }
+    }
+}
+
 fun Project.withProjects(vararg projects: String) {
     dependencies {
         projects.forEach {

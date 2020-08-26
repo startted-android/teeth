@@ -11,8 +11,6 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
-import org.jetbrains.kotlin.gradle.plugin.KotlinBasePluginWrapper
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import utils.implementation
 
 internal val Project.appExtension: AppExtension
@@ -37,24 +35,27 @@ open class BuildPlugin : Plugin<Project> {
                         addCommonDependencies()
                         addAndroidApplicationSection()
                     }
-                    is KotlinBasePluginWrapper -> {
-                        tasks.withType(KotlinCompile::class.java).configureEach {
-                            kotlinOptions {
-                                jvmTarget = "1.8"
-                            }
-                        }
-                    }
                 }
+            }
+            val needsDI = listOf(name.contains("feature"), name == "global").any()
+            if (needsDI) {
+                plugins.apply("kotlin-kapt")
+                addDIDependencies()
             }
         }
     }
 }
 
+private fun Project.addDIDependencies() {
+    dependencies.add("implementation", Libs.toothpickCompiler)
+    dependencies.add("kapt", Libs.toothpickRuntime)
+}
+
 private fun Project.addAndroidApplicationSection() = appExtension.run {
     defaultConfig {
-        applicationId = "com.startted-android.teeth"
+        applicationId = "com.startted.app"
         compileSdkVersion(Versions.Project.compileSdkVersion)
-        minSdkVersion(Versions.Project.compileSdkVersion)
+        minSdkVersion(Versions.Project.minSdkVersion)
         versionCode = 1
         versionName = "1.0"
     }
@@ -71,7 +72,6 @@ private fun Project.addAndroidLibrarySection() = libraryExtension.run {
         compileSdkVersion(Versions.Project.compileSdkVersion)
         versionCode = 1
         versionName = "1.0"
-        consumerProguardFiles("consumer-rules.pro")
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -85,6 +85,5 @@ private fun Project.addCommonDependencies() = dependencies {
 
 private fun Project.addCommonPlugins() {
     plugins.apply("kotlin-android")
-    plugins.apply("kotlin-kapt")
     plugins.apply("kotlin-android-extensions")
 }

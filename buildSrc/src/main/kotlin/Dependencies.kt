@@ -1,7 +1,7 @@
 import com.sun.xml.internal.ws.api.config.management.policy.ManagementAssertion
 
 object Libs {
-    const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}.kotlin_version"
+    const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
 
     object AndroidX {
 
@@ -24,11 +24,9 @@ object Libs {
     const val rxAndroid = "io.reactivex.rxjava2:rxandroid:2.1.1"
 
     object Network {
-        const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.Libraries.okHttp}"
         const val okhttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.Libraries.okHttp}"
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.Libraries.retrofit}"
         const val retrofitGson = "com.squareup.retrofit2:converter-gson:${Versions.Libraries.retrofit}"
-        const val retrofitCoroutines = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
         const val retrofitRx = "com.squareup.retrofit2:adapter-rxjava2:${Versions.Libraries.retrofit}"
     }
 

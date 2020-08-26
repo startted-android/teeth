@@ -1,6 +1,5 @@
-import utils.withLibraries
 import utils.withProjects
-import utils.withKapts
+import utils.withLibraries
 
 plugins {
     id("com.android.library")
@@ -8,17 +7,12 @@ plugins {
 }
 
 withProjects(
-    Modules.Sample.Common.resources
+    Modules.Sample.Mvvm.common
 )
 
 withLibraries(
     Libs.AndroidX.Ktx.coreKtx,
     Libs.AndroidX.appCompat,
-    Libs.AndroidX.material,
-    Libs.toothpickRuntime,
+    Libs.AndroidX.Ktx.viewModelKtx,
     Libs.cicerone
-)
-
-withKapts(
-    Libs.toothpickCompiler
 )

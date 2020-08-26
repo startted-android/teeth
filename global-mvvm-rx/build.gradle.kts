@@ -1,14 +1,18 @@
+import utils.withApis
 import utils.withLibraries
-import utils.withProjects
-import utils.withKapts
+import utils.withApiProjects
 
 plugins {
-    id("BuildPlugin")
     id("com.android.library")
+    id("BuildPlugin")
 }
 
-withProjects(
+withApiProjects(
     Modules.Libraries.global
+)
+
+withApis(
+    Libs.cicerone
 )
 
 withLibraries(

@@ -3,8 +3,8 @@ import utils.withProjects
 import utils.withKapts
 
 plugins {
-    id("BuildPlugin")
     id("com.android.library")
+    id("BuildPlugin")
 }
 
 withProjects(
