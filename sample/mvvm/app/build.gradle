@@ -28,11 +28,11 @@ android {
 }
 
 dependencies {
-    implementation project (":sample:resources")
-    implementation project (":sample:core-network")
+    implementation project (":sample:common:resources")
+    implementation project (":sample:common:network")
     implementation project(':sample:mvvm:common')
-    implementation project (":sample:mvvm:features:feature-mainflow")
-    implementation project (":sample:mvvm:features:feature-articles")
+    implementation project (":sample:mvvm:features:mainflow")
+    implementation project (":sample:mvvm:features:articles")
     implementation deps.stdlib
     implementation deps.androidx.ktx.core
     implementation deps.androidx.appcompat

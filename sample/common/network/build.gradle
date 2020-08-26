@@ -14,7 +14,7 @@ android {
 }
 
 dependencies {
-    implementation project (":sample:model")
+    implementation project (":sample:common:model")
     implementation deps.stdlib
     implementation deps.androidx.ktx.core
     implementation deps.androidx.appcompat
