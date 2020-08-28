@@ -94,9 +94,4 @@ abstract class FlowFragment : BaseFragment() {
         super.onPause()
     }
 
-    fun navigateToLaunchScreen() {
-        if (currentFragment?.javaClass != getLaunchScreen().fragment?.javaClass) {
-            navigator.setLaunchScreen(getLaunchScreen())
-        }
-    }
 }

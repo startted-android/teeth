@@ -7,10 +7,6 @@ plugins {
     id("BuildPlugin")
 }
 
-withProjects(
-    Modules.Sample.Common.resources
-)
-
 withLibraries(
     Libs.AndroidX.Ktx.coreKtx,
     Libs.AndroidX.appCompat,

@@ -1,4 +1,5 @@
 rootProject.name = "teeth"
+
 registerModules(
     *Modules.libraries,
     *Modules.applications,
